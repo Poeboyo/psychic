@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Psychic
+    </title>
+</head>
+<style>
+
+body{
+    text-align: center;
+    background-image: url("delphi.jpeg");
+    color: blanchedalmond ;
+
+}
+#counter{
+    margin-top: 10%;
+}
+
+</style>
+<h1>
+    Psychic Game
+</h1>
+<h2>What letter am I thinking of?</h2>
+<div id = "counter">
+
+
+</div>
+
+
+<script>
+
+//Have the computer make a guess
+
+
+let wins= 0;
+let guessesRemaining = 10;
+let losses = 0;
+let array = [ ];
+var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+let computerGuess = options [Math.floor(Math.random()*options.length)];
+            console.log(computerGuess);
+function numberGuesser(){
+        computerGuess = options [Math.floor(Math.random()*options.length)];
+        guessesRemaining = 10;
+        array = [ ];
+    }
+//Get userinput on keyboard
+document.onkeyup = function(){
+    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(userGuess)
+    array.push(userGuess)
+//Record wins, losses
+        if(userGuess === computerGuess){
+            wins++;
+            numberGuesser();
+            console.log(computerGuess);
+          
+        } 
+        if (userGuess !== computerGuess){
+            guessesRemaining--
+        }
+        if(guessesRemaining <=0){
+            losses++;
+            numberGuesser();
+            console.log(computerGuess);
+            alert("You Lost, I know how much you love Alerts");
+        };
+        
+      
+
+
+        
+
+//Display Keys already pressed
+var html = "<h3>Correct Guesses: " + wins + "</h3>"+
+    "<h3>Losses: "+ losses + "</h3>" +
+    "<h3>Guesses Left: " + guessesRemaining + "</h3>"+
+    "<h3>Guessed So Far: "+ array + "</h3>";
+
+    document.getElementById("counter").innerHTML = html;
+
+
+};
+
+
+
+
+
+
+</script>
+</html>
