@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     <title>
         Psychic
     </title>
@@ -28,64 +32,7 @@ body{
 </div>
 
 
-<script>
-
-//Have the computer make a guess
-
-
-let wins= 0;
-let guessesRemaining = 10;
-let losses = 0;
-let array = [ ];
-var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-let computerGuess = options [Math.floor(Math.random()*options.length)];
-            console.log(computerGuess);
-function numberGuesser(){
-        computerGuess = options [Math.floor(Math.random()*options.length)];
-        guessesRemaining = 10;
-        array = [ ];
-    }
-//Get userinput on keyboard
-document.onkeyup = function(){
-    var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userGuess)
-    array.push(userGuess)
-//Record wins, losses
-        if(userGuess === computerGuess){
-            wins++;
-            numberGuesser();
-            console.log(computerGuess);
-          
-        } 
-        if (userGuess !== computerGuess){
-            guessesRemaining--
-        }
-        if(guessesRemaining <=0){
-            losses++;
-            numberGuesser();
-            console.log(computerGuess);
-            alert("You Lost, I know how much you love Alerts");
-        };
-        
-      
-
-
-        
-
-//Display Keys already pressed
-var html = "<h3>Correct Guesses: " + wins + "</h3>"+
-    "<h3>Losses: "+ losses + "</h3>" +
-    "<h3>Guesses Left: " + guessesRemaining + "</h3>"+
-    "<h3>Guessed So Far: "+ array + "</h3>";
-
-    document.getElementById("counter").innerHTML = html;
-
-
-};
-
-
-
-
+<script src = "js.js">
 
 
 </script>
