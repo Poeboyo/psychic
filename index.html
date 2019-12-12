@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
     <title>
         Psychic
     </title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Particle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Style Sheet -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
-<style>
 
-body{
-    text-align: center;
-    background-image: url("delphi.jpeg");
-    color: blanchedalmond ;
-
-}
-#counter{
-    margin-top: 10%;
-}
-
-</style>
-<h1>
-    Psychic Game
-</h1>
-<h2>What letter am I thinking of?</h2>
-<div id = "counter">
+<!-- Particle Effect -->
+<div id="particles-js"></div>
+<h2 class="header">What letter am I thinking of?</h2>
 
 
+<div class="container">
+    <!-- Psychic Content -->
+    <div id="counter"></div>
 </div>
 
 
-<script src = "js.js">
+<script src="assets/javascript/particle.js"></script>
+<script src="assets/javascript/script.js"></script>
 
-
-</script>
 </html>

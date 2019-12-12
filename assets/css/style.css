@@ -1,0 +1,21 @@
+body {
+  color: white;
+  background-color: black;
+}
+
+.particles-js-canvas-el {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.container {
+  text-align: center;
+  margin-top: 7%;
+  background-color: black;
+  opacity: 0.8;
+}
+.header {
+  padding-top: 2%;
+  text-align: center;
+}
