@@ -1,6 +1,7 @@
 # Psychic
 
 Choose a Letter and Guess it correctly to win, guess wrong too many times in a row and you lose the game.
+https://poeboyo.github.io/psychic/
 
 ## How it's made
 
